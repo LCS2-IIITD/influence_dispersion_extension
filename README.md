@@ -8,9 +8,9 @@ The NID of an paper can be calculated using this repository.
 
 ## Directories 
 ### src
-This has 3 has scripts named 
+This has 2 has scripts named 
 * ```init.py```
-This script parses the dataset. It parses for the year, and creates a ```global_citation_graph```. In this, the invalid edges are removed, the Influence Dispersion Graph (IDG) for each paper is isolated and converted to Influence Dispersion Tree (IDT) and serialised in the form of a dictionary. 
+This script parses the dataset. It first parses for the year, and then creates a ```global_citation_graph```. In this, the invalid edges are removed, the Influence Dispersion Graph (IDG) for each paper is isolated and converted to Influence Dispersion Tree (IDT) and serialised in the form of a dictionary. 
 The agruments it takes are (All are mandatory):
     * ```--dataset```: path of the meta data file dataset. 
     * ```--dumps```: path to dump the serialised pickled files. 
@@ -81,13 +81,13 @@ The dataset description are as follows:
 
 |            Number of Papers            |    PRJ |    MAS    |
 |:--------------------------------------:|:------:|:---------:|
-|         Number of Papers               |        | 3,908,805 |
-|         Number of Unique Venues        |        |   5,149   |
-|        Number of unique authors        |        | 1,186,412 |
-|    Avg. number of papers per author    |        | 5.21      |
-|    Avg. number of authors per paper    |        | 2.57      |
-| Min/Max number of references per paper |        | 1/2,432   |
-|  Min/Max number of citations per paper |        | 1/13,102  |
+|         Number of Papers               | 384,289| 3,908,805 |
+|         Number of Unique Venues        |   412  |   5,149   |
+|        Number of unique authors        | 235,533| 1,186,412 |
+|    Avg. number of papers per author    | 10.47  | 5.21      |
+|    Avg. number of authors per paper    | 5.33   | 2.57      |
+| Min/Max number of references per paper | 1/581  | 1/2,432   |
+|  Min/Max number of citations per paper | 1/4757 | 1/13,102  |
  
  
-Incase of any queries you can reach us at lcs2@iiitd.ac.in
+Incase of any queries you can reach annuj@iiitd.ac.in
