@@ -5,22 +5,6 @@ authored by Annu Joshi, Sumit Bhatia & Tanmoy Chakraborty.
 The NID of an paper can be calculated using this repository. 
 * The script will parse the citing_cited.csv and create the citation graph, using which the Influence Dispersion Tree and Influence Disperion Index will be calculated.  
 
-The dependencies for this repository are: 
-```
-cycler==0.10.0
-decorator==4.3.0
-kiwisolver==1.0.1
-matplotlib==2.1.0
-networkx==1.11
-numpy==1.15.1
-pyparsing==2.2.1
-python-dateutil==2.7.3
-pytz==2018.7
-scikit-learn==0.19.2
-scipy==1.1.0
-six==1.11.0
-sklearn==0.0
-```
 
 ## Directories 
 ### src
@@ -28,15 +12,10 @@ This has 3 has scripts named
 * ```init.py```
 This script parses the dataset. It parses for the year, and creates a ```global_citation_graph```. In this, the invalid edges are removed, the Influence Dispersion Graph (IDG) for each paper is isolated and converted to Influence Dispersion Tree (IDT) and serialised in the form of a dictionary. 
 The agruments it takes are (All are mandatory):
-    * ```--dataset```: Path to the dataset. 
-    * ```--dumps```: Path to dump the serialised pickled files. 
-
-* ```main.py```
-This script takes the ID of the paper according to dataset, and the year and gives the __Normalised Influence Dispersion__ (NID) and the 
-__Influence Dispersion Index__ (IDI) of the paper. 
-The agruments it takes are (All are mandatory):
-    * ```--dumps```: Path to dump the serialised pickled files. 
-    * ```--id```: ID of the query paper 
+    * ```--dataset```: path of the meta data file dataset. 
+    * ```--dumps```: path to dump the serialised pickled files. 
+    * ```--graph_path```: path to citation-cited.csv. 
+    
     
 * ```utils.py```
 This script houses all the functions used in the other two scripts. all the documentation can be accessed by ```function_name.__doc__```. 
